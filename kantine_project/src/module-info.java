@@ -1,0 +1,2 @@
+module kantine_project {
+}
