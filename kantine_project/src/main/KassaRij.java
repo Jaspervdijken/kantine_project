@@ -5,17 +5,14 @@ import java.util.LinkedList;
 
 public class KassaRij
 {
-	
-	//private ArrayList<Dienblad> queue;
-	private LinkedList<Persoon> queue;
+	private LinkedList<Dienblad> queue;
 
     /**
      * Constructor
      */
     public KassaRij()
     {
-        //this.queue = new ArrayList<Dienblad>();
-    	this.queue = new LinkedList<Persoon>();
+    	this.queue = new LinkedList<Dienblad>();
     }
     
     /**
@@ -24,22 +21,11 @@ public class KassaRij
      * @param klant
      */
     
-    /*
-     * Dienblad in de rij?
     public void sluitAchteraan(Dienblad klant)
     {
         this.queue.add(klant);
     }
-    Of persoon in de rij?
-    */
-    public void sluitAchteraan(Persoon klant)
-    {
-        this.queue.add(klant);
-    }
     
-    
-    
-
     /**
      * Indien er een rij bestaat, de eerste klant uit
      * de rij verwijderen en retourneren.
@@ -47,7 +33,7 @@ public class KassaRij
      *
      * @return Eerste klant in de rij of null
      */
-    public Persoon eerstePersoonInRij()
+    public Dienblad eerstePersoonInRij()
     {
         if(erIsEenRij())
         {
