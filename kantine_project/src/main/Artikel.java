@@ -11,10 +11,7 @@ public class Artikel
 		this.price = price;
 	}
 	
-	public Artikel()
-	{
-		
-	}
+	public Artikel(){}
 	
 	public String getName()
 	{

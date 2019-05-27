@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Stack;
 
-public class Dienblad {
+public class Dienblad
+{
     private ArrayList<Artikel> artikelen;
 
     /**
      * Constructor
      */
-    public Dienblad() {
-    	//
+    public Dienblad()
+    {
         artikelen = new ArrayList();
     }
     
@@ -25,7 +26,8 @@ public class Dienblad {
      *
      * @param artikel
      */
-    public void voegToe(Artikel artikel) {
+    public void voegToe(Artikel artikel)
+    {
     	//
         artikelen.add(artikel);
     }
@@ -35,8 +37,8 @@ public class Dienblad {
      *
      * @return Het aantal artikelen
      */
-    public int getAantalArtikelen() {
-        // method body omitted
+    public int getAantalArtikelen()
+    {
     	return artikelen.size();
     }
 
@@ -46,8 +48,8 @@ public class Dienblad {
      *
      * @return De totaalprijs
      */
-    public double getTotaalPrijs() {
-        // method body omitted
+    public double getTotaalPrijs()
+    {
     	double totaalPrijs = 0;
     	return totaalPrijs;
     }

@@ -2,8 +2,8 @@ package main;
 
 import java.util.Iterator;
 
-public class Kassa {
-
+public class Kassa
+{
 	private KassaRij rij;
 	private double geld;
 	private int aantalArtikelen;

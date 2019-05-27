@@ -94,4 +94,9 @@ public class Persoon
     {
     	return Integer.toString(bsn) + ", " + voornaam + ", " + achternaam + ", " + getGeboorteDatum() + ", " + getGeslacht();
     }
+    
+    public void setDienblad(Dienblad dienblad)
+    {
+    	this.dienblad = dienblad;
+    }
 }
