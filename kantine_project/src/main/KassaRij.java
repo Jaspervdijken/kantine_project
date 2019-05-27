@@ -3,14 +3,16 @@ package main;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class KassaRij {
+public class KassaRij
+{
 	
 	private ArrayList<Dienblad> queue;
 
     /**
      * Constructor
      */
-    public KassaRij() {
+    public KassaRij()
+    {
         this.queue = new ArrayList<Dienblad>();
     }
 
@@ -19,7 +21,8 @@ public class KassaRij {
      *
      * @param klant
      */
-    public void sluitAchteraan(Dienblad klant) {
+    public void sluitAchteraan(Dienblad klant)
+    {
         this.queue.add(klant);
     }
 
@@ -30,7 +33,8 @@ public class KassaRij {
      *
      * @return Eerste klant in de rij of null
      */
-    public Dienblad eerstePersoonInRij() {
+    public Dienblad eerstePersoonInRij()
+    {
         if(erIsEenRij())
         {
         	return this.queue.remove(0);
@@ -43,7 +47,8 @@ public class KassaRij {
      *
      * @return Of er wel of geen rij bestaat
      */
-    public boolean erIsEenRij() {
+    public boolean erIsEenRij()
+    {
     	if(this.queue.size() > 0)
     	{
     		return true;

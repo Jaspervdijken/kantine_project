@@ -6,6 +6,5 @@ public class Main {
 	{
 		Datum datum = new Datum(29,4,2002);
 		//datum.bestaatDatum(29, 4, 2002);
-		//
 	}
 }
