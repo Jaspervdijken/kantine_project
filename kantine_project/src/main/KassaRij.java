@@ -5,27 +5,27 @@ import java.util.LinkedList;
 
 public class KassaRij
 {
-	
-	private ArrayList<Dienblad> queue;
+	private LinkedList<Dienblad> queue;
 
     /**
      * Constructor
      */
     public KassaRij()
     {
-        this.queue = new ArrayList<Dienblad>();
+    	this.queue = new LinkedList<Dienblad>();
     }
-
+    
     /**
      * Persoon sluit achter in de rij aan
      *
      * @param klant
      */
+    
     public void sluitAchteraan(Dienblad klant)
     {
         this.queue.add(klant);
     }
-
+    
     /**
      * Indien er een rij bestaat, de eerste klant uit
      * de rij verwijderen en retourneren.
