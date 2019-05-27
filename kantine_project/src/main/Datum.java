@@ -1,6 +1,7 @@
 package main;
 
-public class Datum {
+public class Datum
+{
 
 	private int dag;
 	private int maand;
@@ -38,8 +39,10 @@ public class Datum {
 				}
 			}
 			//Alle maanden behalve februari, max 30 dagen? -> datum bestaat
-			else if (maand != 2) {
-				if (dag <= 30) {
+			else if (maand != 2)
+			{
+				if (dag <= 30)
+				{
 					System.out.println("true");
 					return true;
 				}
@@ -47,7 +50,8 @@ public class Datum {
 			//Februari over
 			else {
 				//Checken op schrikkeljaar, wanneer schrikkeljaar max 29 dagen, zo niet max 28 dagen
-				if ((maand == 2 && jaar%4 == 0 && dag < 30) || (maand == 2 && jaar%4 != 0 && dag < 29)) {
+				if ((maand == 2 && jaar%4 == 0 && dag < 30) || (maand == 2 && jaar%4 != 0 && dag < 29))
+				{
 					System.out.println("true");
 					return true;
 				} 

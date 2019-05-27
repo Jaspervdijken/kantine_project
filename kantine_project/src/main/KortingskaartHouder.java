@@ -1,6 +1,7 @@
 package main;
 
-public interface KortingskaartHouder {
+public interface KortingskaartHouder
+{
 
     /**
      * Methode om kortingspercentage op te vragen

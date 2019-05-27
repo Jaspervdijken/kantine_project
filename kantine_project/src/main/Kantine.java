@@ -1,6 +1,7 @@
 package main;
 
-public class Kantine {
+public class Kantine
+{
 
     private Kassa kassa;
     private KassaRij kassarij;
@@ -8,7 +9,8 @@ public class Kantine {
     /**
      * Constructor
      */
-    public Kantine() {
+    public Kantine()
+    {
         kassarij = new KassaRij();
         kassa = new Kassa(kassarij);
     }
@@ -19,16 +21,25 @@ public class Kantine {
      * en plaats deze op het dienblad. Tenslotte sluit de
      * Persoon zich aan bij de rij voor de kassa.
      */
-    public void loopPakSluitAan() {
-        // method body omitted
+    public void loopPakSluitAan()
+    {
+    	Persoon persoon = new Persoon(123456789, "Niek", "Tillema", 27, 11, 2001, 'm');
+    	Artikel art1 = new Artikel("Chocomel", 1.5);
+    	Artikel art2 = new Artikel("Broodje Kaas", 2.5);
+    	Dienblad dienblad1 = new Dienblad();
+    	dienblad1.voegToe(art1);
+    	dienblad1.voegToe(art2);
+    	persoon.setDienblad(dienblad1);
     }
 
     /**
      * Deze methode handelt de rij voor de kassa af.
      */
-    public void verwerkRijVoorKassa() {
-        while() {
-            // omitted
+    public void verwerkRijVoorKassa()
+    {
+        while(kassarij.erIsEenRij())
+        {
+            kassa.rekenAf(kassarij.eerstePersoonInRij());
         }
     }
 
@@ -37,8 +48,9 @@ public class Kantine {
      *
      * @return hoeveelheid geld in kassa
      */
-    public double hoeveelheidGeldInKassa() {
-       // method body omitted
+    public double hoeveelheidGeldInKassa()
+    {
+       return kassa.hoeveelheidGeldInKassa();
     }
 
     /**
@@ -46,15 +58,17 @@ public class Kantine {
      *
      * @return het aantal gepasseerde artikelen
      */
-    public int aantalArtikelen() {
-        // method body omitted
+    public int aantalArtikelen()
+    {
+        return kassa.aantalArtikelen();
     }
 
     /**
      * Deze methode reset de bijgehouden telling van
      * het aantal artikelen en "leegt" de inhoud van de kassa.
      */
-    public void resetKassa() {
-        // method body omitted
+    public void resetKassa()
+    {
+        kassa.resetKassa();
     }
 }

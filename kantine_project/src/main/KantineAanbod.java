@@ -2,7 +2,8 @@ package main;
 
 import java.util.*;
 
-public class KantineAanbod {
+public class KantineAanbod
+{
     // interne opslag voorraad
     private HashMap<String, ArrayList<Artikel>> aanbod;
     private HashMap<String, Integer> startVoorraad;
@@ -14,7 +15,8 @@ public class KantineAanbod {
      * is een lijst met hoeveelheden. Let op: de dimensies van de drie arrays
      * moeten wel gelijk zijn!
      */
-    public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid) {
+    public KantineAanbod(String[] artikelnaam, double[] prijs, int[] hoeveelheid)
+    {
         aanbod=new HashMap<String, ArrayList<Artikel>>();
         startVoorraad=new HashMap<String, Integer>();
         prijzen=new HashMap<String,Double>();
@@ -31,7 +33,8 @@ public class KantineAanbod {
         }
     }
 
-    private void vulVoorraadAan(String productnaam){
+    private void vulVoorraadAan(String productnaam)
+    {
     	ArrayList<Artikel> huidigeVoorraad = aanbod.get(productnaam);
     	int startHoeveelheid = startVoorraad.get(productnaam);
     	int huidigeHoeveelheid = huidigeVoorraad.size();
@@ -47,7 +50,8 @@ public class KantineAanbod {
      * Private methode om de lijst van artikelen te krijgen op basis van de    
      * naam van het artikel. Retourneert null als artikel niet bestaat.
      */
-    private ArrayList<Artikel> getArrayList(String productnaam) {
+    private ArrayList<Artikel> getArrayList(String productnaam)
+    {
          return aanbod.get(productnaam); 
     }
 
@@ -55,7 +59,8 @@ public class KantineAanbod {
      * Private methode om een Artikel van de stapel artikelen af te pakken. 
      * Retourneert null als de stapel leeg is.
      */
-    private Artikel getArtikel(ArrayList<Artikel> stapel) {
+    private Artikel getArtikel(ArrayList<Artikel> stapel)
+    {
         if (stapel==null) { 
             return null;
         }
@@ -78,7 +83,8 @@ public class KantineAanbod {
      * @param naam (van artikel)
      * @return artikel (of null)
      */
-    public Artikel getArtikel(String productnaam) {
+    public Artikel getArtikel(String productnaam)
+    {
         return getArtikel(getArrayList(productnaam));
     }
 }
