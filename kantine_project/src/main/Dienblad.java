@@ -6,14 +6,14 @@ import java.util.Stack;
 
 public class Dienblad
 {
-    private ArrayList<Artikel> artikelen;
+    private Stack<Artikel> artikelen;
 
     /**
      * Constructor
      */
     public Dienblad()
     {
-        artikelen = new ArrayList();
+        artikelen = new Stack();
     }
     
     public Dienblad(Persoon persoon)
