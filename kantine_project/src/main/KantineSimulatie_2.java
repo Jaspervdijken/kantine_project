@@ -49,7 +49,7 @@ public class KantineSimulatie {
         kantineaanbod = new KantineAanbod(
             artikelnamen, artikelprijzen, hoeveelheden);
 
-        kantine.setKantineAanbod(kantineaanbod);
+        kantine.setKantineAanbod(artikelnamen, artikelprijzen, hoeveelheden);
     }
 
     /**
@@ -111,18 +111,18 @@ public class KantineSimulatie {
         for(int i = 0; i < dagen; i++) {
 
             // bedenk hoeveel personen vandaag binnen lopen
-            int aantalpersonen = ... ;
+            int aantalpersonen = 0 ;
 
             // laat de personen maar komen...
             for(int j = 0; j < aantalpersonen; j++) {
 
                 // maak persoon en dienblad aan, koppel ze
                 // en bedenk hoeveel artikelen worden gepakt
-                int aantalartikelen = ... ;
+                int aantalartikelen = 0 ;
 
                 // genereer de "artikelnummers", dit zijn indexen
                 // van de artikelnamen
-                array int[] tepakken = getRandomArray(
+                int[] tepakken = getRandomArray(
                     aantalartikelen, 0, AANTAL_ARTIKELEN-1);
 
                 // vind de artikelnamen op basis van
