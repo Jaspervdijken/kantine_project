@@ -2,7 +2,7 @@ package main;
 
 public class KantineSimulatie
 {
-    private Kantine kantine;
+    private static Kantine kantine;
 
     public static final int DAGEN = 7;
 
@@ -20,7 +20,7 @@ public class KantineSimulatie
      *
      * @param dagen
      */
-    public void simuleer(int dagen)
+    public static void simuleer(int dagen)
     {
     	// herhaal voor elke dag
         for(int i = 0; i <= dagen; i++)
@@ -31,7 +31,8 @@ public class KantineSimulatie
             // for lus voor personen
             for(int j = 0; j < 10 + i; j++)
             {
-                kantine.loopPakSluitAan();
+            	//week 2 opdr 5d, nog niet correct
+                kantine.loopPakSluitAan(null, null);
             }
 
             // verwerk rij voor de kassa
@@ -40,6 +41,7 @@ public class KantineSimulatie
             System.out.println("Dag " + i + ": " + kantine.aantalArtikelen() + " artikelen verkocht voor " + kantine.hoeveelheidGeldInKassa() + "euro.");
             // reset de kassa voor de volgende dag
             kantine.resetKassa();
+        }
     }
 
     /**
@@ -58,6 +60,6 @@ public class KantineSimulatie
             dagen = Integer.parseInt(args[0]);
         }
 
-        simulate(dagen);
+        simuleer(dagen);
     }
 }
