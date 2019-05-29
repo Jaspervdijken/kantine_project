@@ -32,7 +32,7 @@ public class KantineSimulatie
             for(int j = 0; j < 10 + i; j++)
             {
             	//week 2 opdr 5d, nog niet correct
-                kantine.loopPakSluitAan(null, null);
+                //kantine.loopPakSluitAan(null, null);
             }
 
             // verwerk rij voor de kassa
