@@ -9,7 +9,8 @@ public class Persoon
     private int gb_maand;
     private int gb_jaar;
     private char geslacht;
-    private Dienblad dienblad;
+    
+	private Dienblad dienblad;
     
     public Persoon(int bsn, String voornaam, String achternaam, int dag, int maand, int jaar, char geslacht)
     {
