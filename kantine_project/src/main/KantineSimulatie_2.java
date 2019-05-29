@@ -129,8 +129,10 @@ public class KantineSimulatie {
                 // de indexen hierboven
                 String[] artikelen = geefArtikelNamen(tepakken);
 
+                //week 2 opdr 5d, nog niet correct
                 // loop de kantine binnen, pak de gewenste
                 // artikelen, sluit aan
+                kantine.loopPakSluitAan(null, artikelnamen);
 
             }
 
