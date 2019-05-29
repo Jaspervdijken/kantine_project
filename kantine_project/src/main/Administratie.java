@@ -11,8 +11,14 @@ public class Administratie
      */
     public double berekenGemiddeldAantal(int[] aantal)
     {
-        // method body omitted
-    	return 1.0;
+    	double som = 0;
+    	for(int getal : aantal)
+    	{
+    		som = som + getal;
+    	}
+    	double aantalGetallen = aantal.length;
+    	
+    	return som/aantalGetallen;
     }
 
     /**
@@ -40,7 +46,7 @@ public class Administratie
         for(int i = 0; i < 7; i++) {
 
             int j = 0;
-            while(i < j) {
+            while( i < j ) {
                 temp[i] += omzet[i + 7 * j];
 
                 // omitted

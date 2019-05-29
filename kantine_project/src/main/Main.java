@@ -1,10 +1,20 @@
 package main;
 
-public class Main {
-
-	public static void main(String args[])
-	{
-		Datum datum = new Datum(29,2,2008);
-		//datum.bestaatDatum(29, 4, 2002);
-	}
+public class Main
+{
+    /**
+     * Start een simulatie
+     */
+    public static void main(String[] args)
+    {
+    	int dagen = 10;
+    	
+        if (args.length > 0)
+        {
+            dagen = Integer.parseInt(args[0]);
+        }
+        
+        KantineSimulatie simulatie = new KantineSimulatie();
+        simulatie.simuleer(dagen);
+    }
 }
